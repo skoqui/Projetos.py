@@ -96,3 +96,127 @@ print('Para pintar essa parede, você precisará de {}L de tinta'.format(soma/2)
 preco = float(input('Qual é o preço do produto? R$'))
 novo = preco - (preco * 5/100)
 print('O produto que custava R${}, na promoção com desconto de 5% vai custar R${}'.format(preco, novo))
+
+
+--------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+#TRABALHANDO COM IMPORTS
+
+from math import sqrt
+
+num = int(input('Digite um número: '))
+raiz = math.sqrt(num)
+
+
+#CEIL = Arredonda pra cima
+#Floor = Arredonda para baixo
+
+
+
+
+
+import random
+num = random.randint(1, 10)
+print(num)
+
+
+
+import emoji
+print(emoji.emojize("Olá, Mundo :sunglasses:", use_aliases=True))
+
+
+
+
+#quebrando um número para inteiro
+from math import trunc
+
+num = float(input("Digite um número: "))
+print("O valor digitado foi {} e a sua porção inteira é {}".format(num, trunc(num)))
+
+
+''' OU SEM IMPORT '''
+
+num = float(input("Digite um número: "))
+print("O valor digitado {} e a sua porção inteira é {}".format(num, int(num)))
+
+
+
+
+#CATETOS E HIPOTENUSA
+import math
+ 
+com = float(input("Digite o comprimento do cateto oposto: "))
+adj = float(input("Digite o comprimento do cateto adjacente: "))
+hip = math.hypot(com, adj)
+print("A hipotenusa vai medir {:.2f}".format(hip))  
+
+
+''' MODO 2 '''
+
+from math import hypot
+com = float(input("Digite o comprimento do cateto oposto: "))
+adj = float(input("Digite o comprimento do cateto adjacente: "))
+hip = hypot(com, adj)
+print("A hipotenusa vai medir {:.2f}".format(hip))
+
+
+#SENO, COOSSENO, TANGENTE
+
+import math 
+
+angulo = float(input("Digite o angulo: "))
+
+seno = math.sin(math.radians(angulo))
+print(f"Seno: {seno:.2f}")
+
+cosseno = math.cos(math.radians(angulo))
+print(f"Cosseno: {cosseno:.2f}")
+
+tangente = math.tan(math.radians(angulo))
+print(f"Tangente: {tangente:.2f}")
+
+
+#SORTEANDO UM ITEM NA LISTA
+
+import random 
+
+lista = ["Pedro", "Maria", "João", "Rafael"]
+
+print("Primeiro aluno: {}".format(random.choice(lista)))
+print("Segundo aluno: {}".format(random.choice(lista)))
+print("Terceiro aluno: {}".format(random.choice(lista)))
+
+
+''' ou '''
+
+from random import choice
+
+a1 = input("Primeiro aluno: ")
+a2 = input("Segundo aluno: ")
+a3 = input("Terceiro aluno: ")
+a4 = input("Quarto aluno: ")
+
+lista = [a1, a2, a3, a4]
+
+print("O aluno escolhido foi: {}".format(choice(lista)))
+
+
+
+
+lens() #Faz com que a função retorne o tamanho da string	 exemplo: len('Olá mundo') retorna 9
+count() #Faz com que a função retorne quantas vezes um determinado caractere aparece na string 		exemplo: 'Olá mundo'.count('o') retorna 2
+upper() #Faz com que a função retorne a string em letras maiúsculas 	exemplo: 'Olá mundo'.upper() retorna 'OLÁ MUNDO'
+lower() #Faz com que a função retorne a string em letras minúsculas 	exemplo: 'Olá mundo'.lower() retorna 'olá mundo'
+strip() #Faz com que a função retorne a string sem espaços em branco no início e no final 	exemplo: '   Olá mundo   '.strip() retorna 'Olá mundo'
+replace() #Faz com que a função retorne a string com um determinado caractere substituído por outro 	exemplo: 'Olá mundo'.replace('o', 'a') retorna 'Alá mundo'
+split() #Faz com que a função retorne uma lista dividida por um determinado caractere 	exemplo: 'Olá mundo'.split(' ') retorna ['Olá', 'mundo']
+join() #Faz com que a função retorne uma string unida por um determinado caractere 	exemplo: ''.join(['Olá', 'mundo']) retorna 'Olámundo'
